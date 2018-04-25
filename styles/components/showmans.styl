@@ -1,0 +1,97 @@
+.top5
+  border-bottom 1px solid #ddd
+  // display flex
+  margin-top 200px
+  overflow hidden
+
+.man
+  // border 1px solid
+  display block
+  float left
+  position relative
+  transition transform .3s ease
+  width 20%
+  &__photo
+    display block
+    transition transform .4s ease
+    will-change transform
+    img
+      display block
+      max-width 110%
+      transform translateX(-5%)
+      pointer-events none
+  &__container
+    opacity 0
+    width 20vw
+    padding-top 10rem
+    position absolute
+    right -60%
+    top 0
+    transition opacity .2s ease, transform .2s ease
+    transform translateY(50px)
+    &:before
+      // background-color teal
+      height 100vh
+      content ''
+      left -10vw
+      position absolute
+      top 0
+      width 30vw
+      z-index 50
+    &--active
+      opacity 1
+      transform none
+  &__name
+    font-size 3.2rem
+    margin-bottom 2rem
+  &:hover
+    // border-color red
+    .man__photo
+      transform translateX(-40%)
+
+.man--1
+  &.man--left
+    .man__photo
+      transform translateX(-30%)
+  .man__container
+    right -120%
+  &:hover
+    .man__photo
+      transform translateX(5%)
+.man--2
+  .man__container
+    right -80%
+  &.man--left
+    .man__photo
+      transform translateX(-70%)
+  &.man--right
+    .man__photo
+      transform translateX(+130%)
+.man--3
+  &.man--left
+    .man__photo
+      transform translateX(-95%)
+  &.man--right
+    .man__photo
+      transform translateX(+95%)
+.man--4
+  &.man--left
+    .man__photo
+      transform translateX(-100%)
+  &.man--right
+    .man__photo
+      transform translateX(+70%)
+  .man__container
+    right -20%
+  &:hover
+    .man__photo
+      transform translateX(-100%)
+.man--5
+  &.man--right
+    .man__photo
+      transform translateX(+35%)
+  .man__container
+    right 20%
+  &:hover
+    .man__photo
+      transform translateX(-130%)
